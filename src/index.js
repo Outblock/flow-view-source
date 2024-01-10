@@ -5,7 +5,7 @@ import {RecoilRoot} from "recoil"
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import {MainnetConfig} from "./config/mainnet-config.comp"
 import {TestnetConfig} from "./config/testnet-config.comp"
-import {CrescendoConfig} from "./config/crescendoConfig-config.comp"
+import {CrescendoConfig} from "./config/crescendo-config.comp"
 import {CanarynetConfig} from "./config/canarynet-config.comp"
 import {GlobalStyles} from "./styles/global"
 
@@ -43,7 +43,7 @@ ReactDOM.render(
       <Router>
         <Route path="/mainnet/" component={MainnetConfig} />
         <Route path="/testnet/" component={TestnetConfig} />
-        <Route path="/sandboxnet/" component={CrescendoConfig} />
+        <Route path="/crescendo/" component={CrescendoConfig} />
         <Route path="/canarynet/" component={CanarynetConfig} />
         <Switch>
           <Route exact path="/:env/account/Fx:address" component={Account} />
